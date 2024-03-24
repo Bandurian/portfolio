@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/affiche.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link type="Image/x-icon" href="assets/img/icons/favicon.ico" rel="icon">
+
+    <title>Affiche</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html"><h1 class="port">MB Portfolio</h1></a>
+            </div>
+            <div class="header-right">
+                <!-- Burger menu icon -->
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+
+
+                <!-- Hidden menu list -->
+                <div class="menu-list hide">
+                    <a href="about.html"><button class="button">À propos</button></a>
+                    <a href="contact.html"><button class="button">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="title chain">
+            <div class="text bright">
+                <p class="margin2 tag">#impression</p>
+                <h1 class="bright margin2">Affiche</h1>
+                <p class="margin2">Cette affiche a été réalisée dans le cadre d'un projet avec mon université. Celle-ci contient uniquement des caractères (cyrilliques) dont certains ont été dessinés par moi-même, notamment pour les 
+                lunettes et le nez. <br>Je l'ai créée exclusivement avec le logiciel Illustrator.
+                
+            </p>
+
+                <div class="programs">
+                    <img class="icon" src="assets/img/icons/ai.png" alt="">
+
+                </div>
+
+                
+                <p class="margin1"><i class="uil uil-map-marker-shield"></i>Université Nationale de Radio Electronique de Kharkov</p>
+                <p><i class="uil uil-calender"></i>2020</p>
+                <!-- <a href="contact.html" class="button look dark"><i class="uil uil-eye button__icon"></i>Look</a> -->
+            
+            </div>
+            
+            <!-- <img src="assets/img/Indoor Signage Mockup.jpg" alt=""> -->
+            <div class="img-bg"></div>
+
+            
+
+        </div>
+
+        <div class="colors left chain">
+            <h2 class="dark">Couleurs</h2>
+            <div class="palette chain">
+                <div class="color color1 chain"><p class="dark">#ffd731</p></div>
+                <div class="color color2 chain"><p class="dark">#f0658f</p></div>
+                <div class="color color3 chain"><p class="bright">#000000</p></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="right affiche chain"></div>
+
+    </div>
+
+    <a href="https://bandurian.github.io/portfolio/assets/portfolio_Bandurian Marharyta.pdf" download="portfolio_Bandurian Marharyta.pdf" class="download-button"><i class="uil uil-download-alt button__icon"></i>
+        Portfolio
+    </a>
+    
+
+    <script>
+        function toggleMenu() {
+        var menu = document.querySelector('.menu-list');
+        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+    }
+     </script>
+
+</body>
+</html>

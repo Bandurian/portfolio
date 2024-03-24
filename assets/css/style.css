@@ -1,0 +1,655 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
+/* VARIABLES CSS */
+:root {
+    /* Colors */
+    --hue-color:36;
+
+    /* HSL Color Mode */
+    --skin-color: #68af8d;
+    --title-color: #3b594b;
+    --text-color: #3b594b;
+    /* --body-color: hsl(var(--hue-color), 8%, 94%); */
+    --body-color: #f2eadd;
+    --box-color: #f2eadd;
+    --scroll-bar-color: #68af8d;
+    --scroll-thumb-color: #3b594b;
+
+    /* --bg-color: hsl(151, 51%, 75%); */
+    --bg-color: #b3dac7;
+
+
+    /* --skin-color: hsl(288, 60%, 48%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 85%);
+    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --box-color: hsl(var(--hue-color), 14%, 10%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%); */
+
+    /* Font and typogrophy */
+    --title-font: 'Ultra', serif;
+
+    --body-font: 'Montserrat', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /* Font Weight */
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /* Margenes Bottom */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /* z-index */
+    --z-fixed: 10;
+    --z-modal: 100;
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 2rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1.125rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+body, 
+button,
+input {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--body-color);
+
+
+}
+
+h1, h2 {
+    font-weight: 200;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+
+.open-button {
+    position: absolute;
+    bottom: 10px;
+    right: 1px;
+    transform: translateX(-50%);
+    background-color: #f2eadd;
+    color: #3b594b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 12px;
+    opacity: 0%;
+}
+
+.open-button:hover {
+    opacity: 0%;
+}
+
+
+
+.uil {
+
+ height: 2px;
+}
+
+header {
+    background-color: var(--bg-color); /* Adjust the background color as needed */
+    color: white; /* Adjust the text color as needed */
+    padding: 10px;
+    padding-left: 5.5%;
+    padding-right: 6%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    /* margin-left: 8rem; */
+}
+
+.header-right button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    /* font-weight: var(--font-bold); */
+    font-family: var(--title-font);
+}
+
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 999; /* Устанавливаем выше других элементов */
+}
+
+.download-button:hover {
+    background-color: #3b594b; /* Изменяем цвет кнопки при наведении */
+}
+
+.download-button::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--bg-color);
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.download-button:hover::after {
+    transform: scale(1);
+
+}
+
+
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .75rem 1.4rem;
+    border-radius: .25rem;
+    /* font-weight: var(--font-medium); */
+    position: relative;
+    z-index: 1;
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2eadd;
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.button:hover::after {
+    transform: scale(1);
+
+}
+
+.button__icon {
+    font-size: 1.25rem;
+}
+
+
+/* .grid-container  */
+    /* margin: 40px; /* Отступы со всех сторон */
+    /* display: grid; */ 
+    /* grid-template-rows: repeat(3, );
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px; */
+
+
+    /* grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-template: "Site Site Site Img1 Img1 Img2" "Site Site Site Phone Phone Edit" "Eyes Simple Interfaces Phone Phone Peace" "You-design Integrations Integrations Enterprise Tools Tools" ". . . . . ."/1fr 1fr 1fr 1fr 1fr;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+
+/* .center {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.grid-container {
+    /* max-height: 180vh; */
+
+    display: grid;
+    /* grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, ); */
+    gap: 0.75%;
+    grid-template-columns: repeat(6, 15%);
+  grid-template-rows: repeat(3, min-content);
+  
+    /* grid-template-areas:
+      "site site site img1 img1 img2"
+      "site site site logo logo img3"
+      "img4 img4 img5 logo logo img6"
+      ". . . . . . "; */
+      padding-left: 5%;
+      /* padding-left: 10rem; */
+  
+      /* padding-left: 7rem; */
+      /* margin-right: -5%; */
+      margin-top: 1rem;
+      aspect-ratio: 1;
+  }
+
+
+
+
+
+
+/* .Site {
+  grid-area: site;
+}
+
+.Img1 {
+  grid-area: img1;
+}
+
+.Img2 {
+  grid-area: img2;
+}
+
+.Logo {
+  grid-area: logo;
+}
+
+.Img3 {
+  grid-area: img3;
+}
+
+.Img4 {
+  grid-area: img4;
+}
+
+.Img5 {
+  grid-area: img5;
+}
+
+.Img6 {
+  grid-area: img6;
+} */
+
+
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem; /* добавляем скругленные углы */
+    transition: filter 0.3s, transform 1.3s; /* добавляем анимацию для плавного перехода при наведении */
+    filter: grayscale(70%);
+    /* filter: hue-rotate(90deg); */
+    position: relative; /* Добавляем позиционирование */
+}
+
+.cell {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 1.5rem;
+
+
+}
+
+.cell.large {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+
+
+.cell.demi {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.cell.long {
+    grid-column: span 2;
+} 
+
+.cell.long img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.cell:hover img {
+    filter: grayscale(0%); 
+    /* filter: hue-rotate(0deg); */
+    cursor: pointer; /* меняем курсор на pointer при наведении */
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
+
+
+@media screen and (max-width: 1700px) {
+
+body {
+    overflow: visible;
+}
+
+
+    .grid-container {
+    gap: 0.75%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "img4 img4 img1 img1"
+      "img5 img6 img2 img3"
+      "site site  logo logo"
+      "site site  logo logo"
+      ". . . . . . ";
+      margin-left: 2rem;
+      padding-left: 0;
+      margin: 2rem;
+      aspect-ratio: 1;
+      margin-top: 3rem;
+
+    }
+    
+
+    .cell.large {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+header {
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
+.cell.demi {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.cell.long {
+    grid-column: span 2;
+} 
+
+.cell.long img {
+    /* width: 100%;
+    height: auto; */
+}
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+        .grid-container {
+        gap: 1vh;
+        margin-top: 10rem;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: repeat(8, 25vh); */
+        grid-template-rows: repeat(8, min-content);
+        /* grid-template-areas:
+          "img4 img4 img1 img1"
+          "img5 img6 img2 img3"
+          "site site  logo logo"
+          "site site  logo logo"
+          ". . . . . . "; */
+
+
+          aspect-ratio: 1;
+
+        }
+        
+    
+        .cell.large {
+        grid-row: span 2;
+        grid-column: span 2;
+        
+        }
+
+    
+    
+    .cell.demi {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    
+    .cell.long {
+
+        grid-column: span 2;
+    } 
+    
+
+
+
+    }
+
+
+        .cell {
+            position: relative; /* Добавляем относительное позиционирование для .cell */
+        }
+        
+        .cell::before {
+            content: attr(data-hashtag); /* Устанавливаем контент для псевдоэлемента из атрибута data-hashtag */
+            position: absolute; /* Абсолютное позиционирование */
+            top: 10px; /* Отступ сверху */
+            left: 10px; /* Отступ слева */
+            background-color: #f2eadd; /* Цвет фона хештега */
+            padding: 5px 10px; /* Отступы внутри подложки хештега */
+            border-radius: 5px; /* Скругление углов */
+            color: #3b594b; /* Цвет текста хештега */
+            font-size: 12px; /* Размер текста хештега */
+            pointer-events: none; /* Позволяет избежать ненамеренного наведения курсора на хештег */
+            z-index: 2; /* Устанавливаем выше изображения */
+            opacity: 0; /* Скрываем хештег изначально */
+            transition: opacity 0.3s; /* Анимация появления хештега */
+        }
+        
+        .cell:hover::before {
+            opacity: 80%; /* Показываем хештег при наведении */
+        }
+
+
+
+
+
+
+
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #3b594b;
+            margin: 5px 0;
+        }
+        
+        /* CSS for the menu list */
+        .menu-list {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position below the header */
+            right: 0; /* Align to the right side */
+            background-color: var(--bg-color); /* Adjust as needed */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 100; /* Ensure it's above other content */
+            width: 150px; /* Adjust width as needed */
+        }
+
+        
+        
+        @media screen and (min-width: 769px) {
+            .menu-list {
+                display: flex;
+                position: static; /* Изменяем позиционирование на статическое */
+                background-color: transparent; /* Изменяем цвет фона на прозрачный */
+                padding: 0; /* Убираем внутренний отступ */
+                box-shadow: none; /* Убираем тень */
+                width: auto; /* Ширина по содержимому */
+            }
+        }
+        
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .burger-menu {
+                display: block;
+                padding-right: 30px;
+
+            }
+
+            .grid-container {
+                margin-top: 5rem;
+            }
+
+            .port {
+                font-size: var(--h2-font-size);
+            }
+            
+            .menu-list {
+                display: none;
+                flex-direction: row;
+                width: auto;
+                position: absolute;
+                top: 60px;
+                background-color: var(--bg-color); /* Adjust as needed */
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-right: 2.5rem;
+            }
+            .menu-list a {
+                margin-bottom: 10px;
+            }
+
+            header {
+                position: fixed;
+                /* padding-right: 100px; */
+                top: 0;
+                width: 95%;
+                z-index: 1000;
+            }
+
+            img {
+                filter: grayscale(40%);
+                /* filter: hue-rotate(90deg); */
+                position: relative; /* Добавляем позиционирование */
+            }
+
+            .cell::before {
+
+                opacity: 0; /* Скрываем хештег изначально */
+
+            }
+
+            .open-button {
+                position: absolute;
+                bottom: 10px;
+                right: 1px;
+                transform: translateX(-50%);
+                background-color: #f2eadd;
+                color: #3b594b;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+                font-size: 12px;
+                opacity: 80%;
+            }
+            
+            .open-button:hover {
+                opacity: 100%;
+            }
+
+            
+            
+        }
+        
+
+        a {
+            text-decoration:none;
+        }
+
+
+

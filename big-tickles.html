@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/big-tickles.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link type="Image/x-icon" href="assets/img/icons/favicon.ico" rel="icon">
+
+    <title>Big Tickles</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html"><h1 class="port">MB Portfolio</h1></a>
+            </div>
+            <div class="header-right">
+                <!-- Burger menu icon -->
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+
+
+                <!-- Hidden menu list -->
+                <div class="menu-list hide">
+                    <a href="about.html"><button class="button">À propos</button></a>
+                    <a href="contact.html"><button class="button">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main">
+        <div class="title chain">
+            <div class="text bright">
+                <p class="margin2 tag">#game-design</p>
+                <h1 class="bright margin2">Big Tickles</h1>
+                <p class="margin2">
+                    Un projet de groupe que nous avons réalisé avec une équipe de 5 étudiants lors d'un atelier de spécialisation. <br> Le sujet de cet atelier était de designer et développer au moins le premier niveau d'un jeu vidéo avec la thématique suivante : choisir un univers horrifique (provenant de n'importe quelle production culturelle) et le rendre enfantin pour que le jeu soit adapté à un public de 7 à 10 ans. <br>
+                    Nous avons pour cela décidé d'adapter l'univers des films Saw en un jeu pour lequel j'ai été chargé de designer les personnages et une partie des graphismes.
+                </p>
+
+                <div class="programs">
+                    <img class="icon" src="assets/img/icons/ai.png" alt="">
+                    <img class="icon" src="assets/img/icons/ps.png" alt="">
+                    
+                    <img class="icon" src="assets/img/icons/ae.png" alt="">
+                    <img class="icon" src="assets/img/icons/pr.png" alt="">
+                    <img class="icon" src="assets/img/icons/unity.png" alt="">
+                    
+                </div>
+
+                
+                <p class="margin1"><i class="uil uil-map-marker-shield"></i>Université de Toulon </p>
+                <p><i class="uil uil-calender"></i>2024</p>
+                <!-- <a href="https://bandurian.github.io/webtrends/" target="_blank" class="button look dark"><i class="uil uil-eye button__icon"></i>Look</a> -->
+            
+            </div>
+            
+            <!-- <img src="assets/img/Indoor Signage Mockup.jpg" alt=""> -->
+            <div class="img-bg"></div>
+
+            
+
+        </div>
+        
+        <div class="left perso1 chain"><h2 class="bright">Perso 1</h2></div>
+        <div class="right perso2 chain"><h2 class="bright">Perso 2</h2></div>
+        <div class="left perso3 chain"><h2 class="bright">Perso 3</h2></div>
+        <div class="right perso4 chain"><h2 class="bright">Perso 4</h2></div>
+
+        <div class="center cin1 chain">
+            <h2 class="bright">Cinématique 1</h2>
+            <video id="backgroundVideo1"  loop muted class="video-background">
+                <source src="assets/img/cin1.mp4" type="video/mp4">
+                
+            </video>
+            <button id="toggleButton1" onclick="toggleVideo1()"><i class="uil uil-play"></i></button>
+            <button id="muteButton1" onclick="toggleMute1()"><i class="uil uil-volume-mute"></i></button>
+        </div>
+        
+        <div class="center team chain"><h2 class="bright">Autres personnages</h2></div>
+
+        <div class="center cin2 chain">
+            <h2 class="bright">Cinématique 2</h2>
+            <video id="backgroundVideo2"  loop muted class="video-background">
+                <source src="assets/img/cin2.mp4" type="video/mp4">
+                
+            </video>
+            <button id="toggleButton2" onclick="toggleVideo2()"><i class="uil uil-play"></i></button>
+            <button id="muteButton2" onclick="toggleMute2()"><i class="uil uil-volume-mute"></i></button>
+        </div>
+
+        <div class="center icons chain"><h2 class="bright">Icônes</h2></div>
+
+    </div>
+
+    <a href="https://bandurian.github.io/portfolio/assets/portfolio_Bandurian Marharyta.pdf" download="portfolio_Bandurian Marharyta.pdf" class="download-button"><i class="uil uil-download-alt button__icon"></i>
+        Portfolio
+    </a>
+    
+
+    <script>
+        function toggleMenu() {
+        var menu = document.querySelector('.menu-list');
+        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+    }
+     </script>
+
+     <script>
+            function toggleVideo1() {
+    var video = document.getElementById("backgroundVideo1");
+    var buttonIcon = document.getElementById("toggleButton1").getElementsByTagName("i")[0];
+
+    if (video.paused) {
+        video.play();
+        buttonIcon.classList.remove("uil-play");
+        buttonIcon.classList.add("uil-pause");
+    } else {
+        video.pause();
+        buttonIcon.classList.remove("uil-pause");
+        buttonIcon.classList.add("uil-play");
+    }
+}
+
+function toggleMute1() {
+    var video = document.getElementById("backgroundVideo1");
+    var buttonIcon = document.getElementById("muteButton1").getElementsByTagName("i")[0];
+
+    if (video.muted) {
+        video.muted = false;
+        buttonIcon.classList.remove("uil-volume-mute");
+        buttonIcon.classList.add("uil-volume");
+    } else {
+        video.muted = true;
+        
+        buttonIcon.classList.remove("uil-volume");
+        buttonIcon.classList.add("uil-volume-mute");
+    }
+}
+     </script>
+
+
+
+    <script>
+        function toggleMenu() {
+        var menu = document.querySelector('.menu-list');
+        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+    }
+     </script>
+
+     <script>
+            function toggleVideo1() {
+    var video = document.getElementById("backgroundVideo1");
+    var buttonIcon = document.getElementById("toggleButton1").getElementsByTagName("i")[0];
+
+    if (video.paused) {
+        video.play();
+        buttonIcon.classList.remove("uil-play");
+        buttonIcon.classList.add("uil-pause");
+    } else {
+        video.pause();
+        buttonIcon.classList.remove("uil-pause");
+        buttonIcon.classList.add("uil-play");
+    }
+}
+
+function toggleMute1() {
+    var video = document.getElementById("backgroundVideo1");
+    var buttonIcon = document.getElementById("muteButton1").getElementsByTagName("i")[0];
+
+    if (video.muted) {
+        video.muted = false;
+        buttonIcon.classList.remove("uil-volume-mute");
+        buttonIcon.classList.add("uil-volume");
+    } else {
+        video.muted = true;
+        
+        buttonIcon.classList.remove("uil-volume");
+        buttonIcon.classList.add("uil-volume-mute");
+    }
+}
+     </script>
+
+
+<script>
+    function toggleVideo2() {
+var video = document.getElementById("backgroundVideo2");
+var buttonIcon = document.getElementById("toggleButton2").getElementsByTagName("i")[0];
+
+if (video.paused) {
+video.play();
+buttonIcon.classList.remove("uil-play");
+buttonIcon.classList.add("uil-pause");
+} else {
+video.pause();
+buttonIcon.classList.remove("uil-pause");
+buttonIcon.classList.add("uil-play");
+}
+}
+
+function toggleMute2() {
+var video = document.getElementById("backgroundVideo2");
+var buttonIcon = document.getElementById("muteButton2").getElementsByTagName("i")[0];
+
+if (video.muted) {
+video.muted = false;
+buttonIcon.classList.remove("uil-volume-mute");
+buttonIcon.classList.add("uil-volume");
+} else {
+video.muted = true;
+
+buttonIcon.classList.remove("uil-volume");
+buttonIcon.classList.add("uil-volume-mute");
+}
+}
+</script>
+
+
+</body>
+</html>

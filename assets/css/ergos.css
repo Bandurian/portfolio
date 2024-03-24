@@ -1,0 +1,485 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+.main {
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6.5rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    
+
+}
+
+
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 999; /* Устанавливаем выше других элементов */
+}
+
+.download-button:hover {
+    background-color: #3b594b; /* Изменяем цвет кнопки при наведении */
+}
+
+.download-button::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--bg-color);
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.download-button:hover::after {
+    transform: scale(1);
+
+}
+
+.look {
+    /* color: #5a429a; */
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+}
+
+.icon {
+    width: 5vh;
+    margin-bottom: 2vh;
+    margin-right: 2%;
+}
+h2 {
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    font-weight: 200;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.chain {
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.margin1 {
+    margin-bottom: 1vh;
+}
+
+.margin2 {
+    margin-bottom: 3vh;
+}
+
+/* img {
+    max-width: 50%;
+
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding-left: 1%;
+
+} */
+
+.img-bg {
+    width: 49%;
+    height: 100%;
+    background-color: #6bcce1;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-left: 1.5%;
+    background-image: url('../img/Indoor Signage Mockup.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+
+.uil {
+    margin-right: 8px;
+}
+
+.tag {
+    background: #ffffff;
+    opacity: 70%;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -1%;
+    border-radius: 1rem;
+    color: #353d7a;
+    font-weight: 800;
+}
+
+.text {
+    width: 50%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+
+.title {
+    background-color: #5d67ae;
+        width: 100%;
+        display: flex;
+
+        align-items: center;
+}
+
+
+
+
+
+
+
+.fonts {
+    background-color: #5d67ae;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.font {
+    display: flex;
+}
+
+.font1 {
+
+    width: 50%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5vh;
+
+
+}
+
+.font2 {
+
+    width: 50%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5vh;
+
+
+}
+
+.example-font {
+    font-size: 20vh;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  padding-top: 10vh;
+}
+
+.example-font2 {
+    font-size: 20vh;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  padding-top: 10vh;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.left {
+    width: 49%;
+    margin-right: 1%;
+}
+
+.right {
+    width: 49%;
+    margin-left: 1%;
+}
+
+.center {
+    width: 100%;
+    background-color: #5a429a;
+}
+
+
+.pen {
+    height: 30vh;
+    background-image: url('../img/pen_point_02.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    
+}
+
+
+.palette {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+
+    height: 30vh;
+
+}
+
+
+.palette {
+    display: flex;
+    flex-direction: row;
+}
+
+.colors {
+    background-color: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+
+.color {
+
+    flex-grow: 1;
+    width: 3rem;
+    height: 100%;
+    position: relative; 
+    
+}
+
+.color1 {
+    background-color: #6bcce1;
+    margin-right: 2%;
+}
+
+.color2 {
+    background-color: #5a429a;
+    margin-left: 2%;
+}
+
+.color p {
+    font-weight: 800;
+    margin: 0; /* Убираем внешние отступы у параграфа, чтобы текст не съезжал */
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 5px; /* Располагаем надпись с отступом снизу */
+    left: 50%; /* Располагаем надпись по центру горизонтально */
+    transform: translateX(-50%); /* Сдвигаем надпись на половину её ширины влево, чтобы она оказалась по центру */
+}
+
+.bright {
+    color: #ffffff;
+    
+}
+
+.dark {
+    color: #353d7a;
+}
+
+
+
+.card1 {
+    height: 50vh;
+    background-image: url('../img/card2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+
+.card2 {
+    height: 50vh;
+    background-image: url('../img/card1.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.shirt {
+    height: 50vh;
+    background-image: url('../img/ergosshirt.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.cup {
+    height: 50vh;
+    background-image: url('../img/ergoscup.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
+
+
+@media screen and (max-width: 769px) {
+    .left {
+        width: 100%;
+
+    }
+    
+    .right {
+        width: 100%;
+
+    }
+    
+    .title {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+
+    .img-bg {
+        width: 100%;
+        height: 50vh;
+        border-radius: 0;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        margin: 0%;
+
+        background-image: url('../img/Indoor Signage Mockup.jpg');
+        background-size: cover; 
+        background-position: center; 
+    }
+    
+    .text {
+        width: 100%;
+        padding: 5vh;
+        margin: 0;
+    }
+
+    .main {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .tag {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .font1 {
+        /* background-color: rgb(202, 202, 235); */
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 2vh;
+       
+    }
+
+    .font2 {
+        /* background-color: rgb(202, 202, 235); */
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 10vh;
+       
+    }
+    
+    /* .font2 {
+        width: 100%;
+    } */
+
+    .font {
+        flex-direction: column;
+    }
+
+    .example-font {
+        font-size: 20vh;
+        font-family: "Bebas Neue", sans-serif;
+      font-weight: 600;
+      padding-top: 10vh;
+    }
+
+    .example-font2 {
+        font-size: 20vh;
+        font-family: "Bebas Neue", sans-serif;
+      font-weight: 600;
+      padding-top: 10vh;
+    }
+
+    .fonts {
+        background-color: #5d67ae;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5vh;
+        /* width: 50%; */
+    }
+
+
+    .palette {
+
+        flex-direction: column;
+    }
+    
+    .colors {
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+    
+    
+    .color {
+    
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        position: relative; 
+        margin-bottom: 0;
+        
+    }
+    
+    .color1 {
+        background-color: #6bcce1;
+        margin-right: 0%;
+        margin-bottom: 2vh;
+    }
+    
+    .color2 {
+        background-color: #5a429a;
+        margin-left: 0%;
+    }
+
+    .pen {
+        height: 20vh;
+    }
+
+    .card1, .card2 {
+        height: 30vh;
+    }
+    
+
+
+}
